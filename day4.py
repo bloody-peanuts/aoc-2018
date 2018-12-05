@@ -22,6 +22,16 @@ def problem2():
             ans = g * inp[g].index(thismax)
     return ans
 
+def problem3():
+    mintime = 10000
+    ans = 0
+    for g in inp:
+        tot = sum(inp[g])
+        if tot < mintime:
+            mintime = tot
+            ans = [g, tot]
+    return ans
+
 def parseShifts(entries):
     g = {}
     guard = 0
@@ -47,4 +57,5 @@ with open("day4.txt") as f:
 
 print("Problem 1:", problem1())
 print("Problem 2:", problem2())
+print("Problem 3:", problem3())
 print("Runtime:", (time.time() - start_time))
