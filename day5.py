@@ -24,8 +24,7 @@ def problem2(): #5446
 with open("day5.txt") as f:
     blob = [ord(c) for c in f.readline().strip()]
 
-ans1 = problem1(blob, True)
-print("Problem 1:", ans1)
+print("Problem 1:", problem1(blob, True))
 mid_time = time.time()
 print("Problem 2:", problem2())
 end_time = time.time()
