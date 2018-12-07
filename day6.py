@@ -35,7 +35,7 @@ def problem2():
 
 
 def parseImp(c):
-    global maxX, minX, maxY, minY, totX, totY
+    global maxX, minX, maxY, minY
     c = c.split()
     x = int(c[0][:-1])
     y = int(c[1])
@@ -43,16 +43,9 @@ def parseImp(c):
     maxY = max(maxY, y)
     minX = min(minX, x)
     minY = min(minY, y)
-    totX += x
-    totY += y
     return [x, y]
 
-maxX = -1000
-minX = 1000
-maxY = -1000
-minY = 1000
-totX = 0
-totY = 0
+minX, minY, maxX, maxY = 1000, 1000, 0, 0
 
 with open('day6.txt') as f:
     coords = [parseImp(c) for c in f.readlines()]
